@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(USER)
+  photos    Photo[]
+  createdAt DateTime @default(now())
+}
+
+model Frame {
+  id         Int      @id @default(autoincrement())
+  name       String
+  frameUrl   String
+  photoCount Int
+  isActive   Boolean  @default(true)
+  variants   PhotoVariant[]
+  createdAt  DateTime @default(now())
+}
+
+model Photo {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id])
+  variants  PhotoVariant[]
+  createdAt DateTime @default(now())
+}
+
+model PhotoVariant {
+  id        Int      @id @default(autoincrement())
+  photoId   Int
+  frameId   Int
+  imageUrl  String
+
+  photo     Photo    @relation(fields: [photoId], references: [id])
+  frame     Frame    @relation(fields: [frameId], references: [id])
+}
