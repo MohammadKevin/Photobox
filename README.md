@@ -18,9 +18,9 @@ NestJS backend API powering photobooth session bookings, digital photo strip arc
 ---
 
 ## ✨ Key Features
-- ⚡ **Photobooth session reservation and time-slot locking**: Photobooth session reservation and time-slot locking
-- ⚡ **Secure time-limited photo strip download URLs**: Secure time-limited photo strip download URLs
-- ⚡ **Admin metrics for daily customer count and revenue**: Admin metrics for daily customer count and revenue
+- Photobooth session reservation and time-slot locking
+- Secure time-limited photo strip download URLs
+- Admin metrics for daily customer count and revenue
 
 ---
 
