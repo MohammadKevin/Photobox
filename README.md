@@ -12,26 +12,26 @@
 
 ---
 
-## 📌 Overview
+## Overview
 NestJS backend API powering photobooth session bookings, digital photo strip archiving, download token generation, and POS receipt integration.
 
 ---
 
-## ✨ Key Features
+## Key Features
 - Photobooth session reservation and time-slot locking
 - Secure time-limited photo strip download URLs
 - Admin metrics for daily customer count and revenue
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Framework**: NestJS
 - **Language**: TypeScript
 - **Security**: JWT, Passport
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```text
 Photobox/
 ├── src/
@@ -43,7 +43,7 @@ Photobox/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have the required runtimes and tools installed on your machine:
@@ -60,7 +60,7 @@ npm run start:dev
 
 ---
 
-## 👤 Author
+## Author
 **Mohammad Kevin Arif Rudianto**
 - **GitHub:** [@MohammadKevin](https://github.com/MohammadKevin)
 - **Portfolio:** [portfolio-mohammadkevin.vercel.app](https://portfolio-mohammadkevin.vercel.app)
@@ -69,9 +69,9 @@ npm run start:dev
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 <div align="center">
-⭐️ If you found this repository useful, please consider giving it a star!
+If you found this repository useful, please consider giving it a star!
 </div>
